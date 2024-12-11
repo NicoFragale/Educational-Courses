@@ -1,10 +1,62 @@
 Lezione 1
 
+1. Cos'è il linguaggio macchina?
+    - Teoria 
+    - Esempi pratici per diverse architetture
+
+2. Differenza tra linguaggio macchina e linguaggio di alto livello
+    - Cos'è il linguaggio di alto livello 
+    - Esempi di codice scritto in python/C a confronto con linguaggio macchina
+    - Come i linguaggi di alto livello migliorano la portabilità tra diverse piattaforme.
+
+3. Codice macchina VS Codice Assembly 
+    - Cos'è il linguaggio Assembly 
+    - Introduzione agli strumenti di assemblaggio (es. NASM, MASM).
+    - Come i compilatori e gli assembler traducono il codice in linguaggio macchina.
+    - Scrivere una semplice operazione aritmetica sia in Assembly che in codice macchina.
+
 ----------------------------
 Lezione 2
 
+1. Architettura di base 
+    - Introduzione ai registri (tipi e scopi: PC, ACC, SP, ecc.).
+    - Architettura di von Neumann vs Architettura Harvard.
+
+2. Ciclo di FETCH-DECODE-EXECUTE
+    - Teoria 
+    - Esempio dettagliato del ciclo usando un'istruzione reale.
+    - Introduzione alla parallelizzazione delle fasi di fetch, decode ed execute.
+    - Come il ciclo viene influenzato dalle interruzioni hardware e software.
+    - Come la cache influisce sulle prestazioni del ciclo di esecuzione.
+
+3. Tipi di istruzioni
+    - Esempi di istruzioni per aritmetica, logica, trasferimento dati, controllo di flusso.
+    Come le istruzioni accedono ai dati (es. diretto, indiretto, immediato).
 ----------------------------
 Lezione 3
 
+1. Decimale, Binario, Ottale, Esadecimale 
+    - Teoria 
+    - Conversioni pratiche tra i vari sistemi numerici.
+    - Addizione, sottrazione, moltiplicazione e divisione in binario.
+2. Codifica di Dati 
+    - Codifiche standard come ASCII, Unicode, UTF-8.
+    - Complemento a due, rappresentazione in virgola mobile (IEEE 754).
+    - Come i colori sono rappresentati nei sistemi binari ed esadecimali (es. RGB, HEX).
+
 ----------------------------
 Lezione 4
+
+1. Buffer Overflow 
+    - Esempi di exploit reali e tecniche per prevenire buffer overflow (es. ASLR, stack canary).
+    - Introduzione a DEP (Data Execution Prevention).
+    - Differenze e applicazioni nell'analisi di codice malevolo.
+
+2. Reverse Engineering 
+    - Strumenti comuni di reverse engineering (es. Ghidra, IDA Pro).
+    - Analisi di malware o software protetti da obfuscation.
+
+3. Virtualizzazione 
+    - Come funzionano le macchine virtuali e la loro interazione con il linguaggio macchina.
+    - Come il linguaggio macchina interagisce con il kernel del sistema operativo.
+    - Come l'architettura e il linguaggio macchina influenzano le prestazioni.
