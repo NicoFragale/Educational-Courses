@@ -1,4 +1,5 @@
 Lezione 1
+
 0. Com'è fatto un computer
 
 1. Cos'è il linguaggio macchina?

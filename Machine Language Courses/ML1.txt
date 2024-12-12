@@ -8,11 +8,15 @@ LEZIONE 1 DI LINGUAGGIO MACCHINA
     
     * Componenti interni:
     
-    1.1 Core  
-    1.2 Cache 
-    1.3 ALU
-    1.4 CU
+    1.1 Core, Ogni core è in grado di eseguire istruzioni indipendentemente.
+    1.2 Cache,  Memoria ultrarapida per memorizzare dati temporanei.
+    1.3 ALU,  Esegue calcoli matematici e operazioni logiche.
+    1.4 CU, Gestisce il flusso delle istruzioni e coordina le operazioni della CPU.
 
+    * Architettura processori: 
+
+    1.5 CISC (Complex Instruction Set Computer):  Istruzioni complesse e variabili in lunghezza.
+    1.6 RISC (Reduced Instruction Set Computer): Istruzioni semplici e uniformi, esecuzione più veloce.
 2. RAM 
     Memoria volatile che conserva dati e programmi in uso temporaneamente.
     Consente di accedere rapidamente ai dati durante l’esecuzione dei programmi.
@@ -24,12 +28,12 @@ LEZIONE 1 DI LINGUAGGIO MACCHINA
 
     * Componenti interni:
 
-    1.1 Socket CPU
-    1.2 Slot RAM 
-    1.3 Chipset
-    1.4 Slot PCle
-    1.5 Connettori SATA/M.2
-    1.6 BIOS/UEFI
+    1.1 Socket CPU, Dove viene inserita la CPU.
+    1.2 Slot RAM, Dove vengono inseriti i moduli RAM.
+    1.3 Chipset, Coordina il traffico dati tra CPU, RAM e periferiche.
+    1.4 Slot PCle,  Per schede di espansione come schede video.
+    1.5 Connettori SATA/M.2, er collegare unità di archiviazione (SSD, HDD).
+    1.6 BIOS/UEFI, Firmware che gestisce l’avvio del sistema.
 
 4. HDD
     Unità di archiviazione magnetica tradizionale.
@@ -62,7 +66,7 @@ LEZIONE 1 DI LINGUAGGIO MACCHINA
     Raffreddamento ad aria: Ventole e dissipatori di calore.
     Raffreddamento a liquido: Circuito con liquido refrigerante per dissipare il calore in modo più efficiente.
     Evitare il surriscaldamento della CPU, GPU e altri componenti.
-    
+
 ---
 ** Teoria, cos è il linguaggio macchina?
 
@@ -84,9 +88,21 @@ Ogni istruzione è divisa in:
 10111000 00001100 -> carica il valore 12 nel registro A
 10110000 01100001 -> Carica il valore 61 nel registro AL
 
+ESEMPI: 
+MOV A, 12	Carica il valore 12 nel registro A
+ADD A, B	Somma il contenuto dei registri A e B
+SUB A, 5	Sottrae 5 dal contenuto del registro A
+JMP 1000	Salta all'indirizzo di memoria 1000
+CMP A, B	Confronta i registri A e B
+
 * Componenti 
 
 1. Registri 
+    - Registri di Dati: Conservano valori numerici durante le operazioni (es. AX, BX).
+    - Registri di Indirizzi: Memorizzano indirizzi di memoria (es. SI – Source Index, DI – Destination Index).
+    - Registri di Stato (Flags): Conservano informazioni sul risultato delle operazioni (es. Zero Flag, Carry Flag).
+    - Program Counter (PC): Tiene traccia dell'istruzione successiva da eseguire.
+
 2. Indirizzi di memoria 
 3. Istruzione di controllo 
 
@@ -98,3 +114,34 @@ Ogni istruzione è divisa in:
 1. Fetch: Il processore preleva l'istruzione dalla memoria.
 2. Decode: L'istruzione viene decodificata per capire quale operazione eseguire.
 3. Execute: L'operazione viene eseguita, e il risultato viene memorizzato in un registro o in memoria.
+
+* Esempio di Traduzione da Linguaggio di Alto Livello a Assembly e Macchina
+
+    - Codice in C:
+        int a = 5;
+        int b = 10;
+        int c = a + b;
+
+    - Traduzione in Assembly(x86):
+        MOV AX, 5       ; Carica 5 nel registro AX
+        MOV BX, 10      ; Carica 10 nel registro BX
+        ADD AX, BX      ; Somma i registri AX e BX (AX = AX + BX)
+        MOV CX, AX      ; Sposta il risultato nel registro CX
+
+    - Traduzione in Linguaggio Macchina:
+        10111000 00000101  ; MOV AX, 5
+        10111011 00001010  ; MOV BX, 10
+        00000011 11000000  ; ADD AX, BX
+        10001001 11000000  ; MOV CX, AX
+
+* Pro e Contro 
+    Vantaggi	                                    Svantaggi
+    Esecuzione veloce e diretta	                    Difficile da leggere e scrivere per gli umani
+    Ottimizzazione massima delle risorse hardware	Dipendente dall'architettura del processore
+    Controllo totale sul funzionamento della CPU	Prona agli errori a causa della complessità
+
+* Applicazioni del Linguaggio Macchina
+    .Sviluppo di sistemi embedded (microcontrollori, dispositivi IoT).
+    .Sviluppo di firmware e driver di basso livello.
+    .Reverse engineering e analisi di malware.
+    .Ottimizzazione delle performance in applicazioni critiche come videogiochi e sistemi di controllo industriale.
