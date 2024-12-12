@@ -1,0 +1,100 @@
+LEZIONE 1 DI LINGUAGGIO MACCHINA 
+
+** Com'è fatto un computer:
+
+1. CPU
+    È il "cervello" del computer, dove vengono eseguite tutte le istruzioni e i calcoli.
+    Esegue operazioni logiche, aritmetiche e di controllo.
+    
+    * Componenti interni:
+    
+    1.1 Core  
+    1.2 Cache 
+    1.3 ALU
+    1.4 CU
+
+2. RAM 
+    Memoria volatile che conserva dati e programmi in uso temporaneamente.
+    Consente di accedere rapidamente ai dati durante l’esecuzione dei programmi.
+    È veloce, ma i dati vengono persi quando il computer viene spento.
+    Esempi di RAM: DDR4, DDR5.
+
+3. Scheda Madre
+    Il circuito principale che collega e permette la comunicazione tra tutti i componenti.
+
+    * Componenti interni:
+
+    1.1 Socket CPU
+    1.2 Slot RAM 
+    1.3 Chipset
+    1.4 Slot PCle
+    1.5 Connettori SATA/M.2
+    1.6 BIOS/UEFI
+
+4. HDD
+    Unità di archiviazione magnetica tradizionale.
+    Capacità Elevata, piu lento rispetto agli SSD e contiene parti meccaniche.
+
+5. SSD
+    Unità di archiviazione basata su memoria flash.
+    Molto veloce degli HDD, non ha parti mobili.
+
+    5.1. NVMe SSD
+    Una versione avanzata di SSD collegata tramite interfaccia PCIe.
+    Velocità di lettura/scrittura estremamente elevate. Ideale per carichi di lavoro intensivi e gaming.
+
+6. GPU 
+    Gestisce la grafica e le immagini visualizzate sullo schermo.
+    Può essere integrata, quindi inclusa nella CPU, o Dedicata, quindi separata con propria memoria VRAM
+    Rendering di immagini, video e grafica 3D. Essenziale per gaming, design grafico e calcoli paralleli.
+
+7. Alimentatore 
+    Fornisce energia elettrica a tutti i componenti del computer. Potenza misurata in Watt (es. 500W, 750W).
+
+8. Case
+    La struttura che contiene tutti i componenti del computer.
+
+9. Dispositivo I/O
+    INPUT: Tastiera, mouse, scanner, microfono e webcam 
+    OUTPUT: Monitor, Stampante, casse, cuffie, proiettore
+
+10. Sistema di Raffreddamento
+    Raffreddamento ad aria: Ventole e dissipatori di calore.
+    Raffreddamento a liquido: Circuito con liquido refrigerante per dissipare il calore in modo più efficiente.
+    Evitare il surriscaldamento della CPU, GPU e altri componenti.
+    
+---
+** Teoria, cos è il linguaggio macchina?
+
+è l' unica forma piu bassa di linguaggio di programmazione, comprensibile e utilizzabile dal processore di un computer.
+è una sequenza di istruzioni binarie che la CPU puo eseguire senza alcuna traduzione o interpretazione. 
+Ogni istruzione corrisponde ad una serie di bit (0 o 1).
+    Ogni processore ha il proprio linguaggio macchina, che dipende dalla sua architettura interna (ad esempio, x86, ARM, RISC-V).
+    Essendo costituito da sequenze binarie, è estremamente complicato da leggere e scrivere per gli esseri umani.
+
+- Assembly è rappresentazione testuale del linguaggio macchina leggibile per l'uomo
+- Python ... devono essere 'tradotti'
+
+* Istruzione 
+
+Ogni istruzione è divisa in:
+1. Opcode (Operation Code): Specifica l'operazione da eseguire (ad es. addizione, spostamento di dati, confronto, ecc.).
+2. Operandi: Indicano su quali dati o registri deve operare l'istruzione.
+
+10111000 00001100 -> carica il valore 12 nel registro A
+10110000 01100001 -> Carica il valore 61 nel registro AL
+
+* Componenti 
+
+1. Registri 
+2. Indirizzi di memoria 
+3. Istruzione di controllo 
+
+* Alto livello to Macchina 
+1. Compilazione:  Un compilatore traduce l'intero codice sorgente in linguaggio macchina. Esempi di compilatori includono gcc (per C) e javac (per Java).
+2. Interpretazione: Un interprete esegue il codice sorgente riga per riga traducendolo dinamicamente in istruzioni di linguaggio macchina. Ad esempio, l'interprete di Python esegue il codice durante l'esecuzione.
+
+* Ciclo di Esecuzione 
+1. Fetch: Il processore preleva l'istruzione dalla memoria.
+2. Decode: L'istruzione viene decodificata per capire quale operazione eseguire.
+3. Execute: L'operazione viene eseguita, e il risultato viene memorizzato in un registro o in memoria.
