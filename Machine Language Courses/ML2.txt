@@ -1,0 +1,109 @@
+Lezione 2
+
+** Architettura di base 
+
+* Indirizzi di memoria 
+
+    Ogni dato o istruzione elaborata da un processore viene memorizzata in una posizione specifica della memoria, identificata da un indirizzo univoco.
+    Un indirizzo di memoria è un numero univoco assegnato a ciascuna cella di memoria all’interno di un dispositivo (RAM, ROM, cache, ecc.). Questi indirizzi permettono al processore di localizzare e accedere ai dati o alle istruzioni necessari per l'elaborazione.
+    La memoria è organizzata come una lunga sequenza di celle, ciascuna delle quali può memorizzare una piccola quantità di dati (generalmente 1 byte). 
+    Esempio di Indirizzo: 0x0000, 0x0001, 0x0002
+
+    Tipi di Indirizzi di Memoria: 
+        
+        1. Indirizzo fisico: 
+            l’indirizzo effettivo di una cella di memoria nella RAM o in un altro dispositivo di memoria. È generato dall’hardware e identifica una posizione reale nella memoria fisica.
+            Esempio: 0x7F23A10B rappresenta un indirizzo fisico in una memoria RAM.
+
+        2. Indirizzo Logico (o Virtuale):
+            L’indirizzo logico è un indirizzo generato dal processore quando un programma viene eseguito. Non corrisponde direttamente a una posizione fisica nella memoria, ma viene tradotto in un indirizzo fisico grazie alla MMU (Memory Management Unit).
+            Permette l’isolamento dei processi per evitare che interferiscano tra loro.
+
+    Modi di Indirizzamento: 
+
+        1. Immediato, Il dato è fornito direttamente nell’istruzione.
+            MOV AL, 10h  ; Carica il valore 10h nel registro AL
+
+        2. Diretto, L’istruzione specifica direttamente l’indirizzo di memoria.
+            MOV AL, [0x2000]  ; Carica il contenuto della cella di memoria 0x2000 nel registro AL
+
+        3. Indiretto, L’indirizzo è memorizzato in un registro.
+            MOV AL, [BX]  ; Carica il contenuto dell’indirizzo memorizzato nel registro BX nel registro AL
+
+        4. A registro, L’operando è un registro.
+            MOV AL, BL  ; Copia il contenuto del registro BL nel registro AL
+
+        5. Base e Offset, Combina un registro base con un valore di offset.
+            MOV AL, [BX + 4]  ; Carica il contenuto dell’indirizzo dato da BX + 4 nel registro AL
+
+
+* Registri 
+
+1. PC, Program Counter: 
+    Tiene traccia dell’indirizzo della prossima istruzione da eseguire.
+    Dopo ogni istruzione, il PC viene aggiornato per puntare all'istruzione successiva.
+    Esempio: Se il PC contiene l'indirizzo 0x1000, la CPU preleva l’istruzione da quell’indirizzo e poi aggiorna il PC a 0x1001.
+
+2. ACC, Accumulatore: 
+    Utilizzato per memorizzare temporaneamente i risultati delle operazioni aritmetiche e logiche.
+    Esempio: In un’operazione ADD A, B, il risultato viene spesso memorizzato nell'ACC.
+
+3. SP, Stack Pointer: 
+    Punta all'ultima posizione occupata nello stack, una struttura dati LIFO (Last-In, First-Out) utilizzata per memorizzare dati temporanei come indirizzi di ritorno delle funzioni.
+    Lo SP si aggiorna automaticamente quando vengono effettuate operazioni di push (inserimento) o pop (estrazione).
+
+4. IR, Instruction Register
+    Contiene l'istruzione attualmente in esecuzione.
+
+5. BP, Base Pointer
+    Usato per accedere ai dati relativi allo stack.
+
+6. AX, BX, CX, DX, General Purpose Registers: 
+    Registri multiuso per calcoli e operazioni su dati.
+
+7. FR, Flag Register: 
+    Contiene i flag di stato (es. Zero, Carry, Overflow).
+    Esempi di flag:
+        Zero Flag (ZF): Impostato se il risultato di un'operazione è zero.
+        Carry Flag (CF): Impostato se c'è un riporto (carry) da un’operazione aritmetica.
+        Overflow Flag (OF): Indica un errore di overflow (quando un risultato supera la capacità del registro).
+
+
+* Architettura di von Neumann (PC, Laptop, server)
+    
+    1. Memoria unificata:
+        Programmi e dati sono memorizzati nella stessa memoria fisica.
+        La CPU accede sia ai dati che alle istruzioni attraverso lo stesso bus di comunicazione.
+
+    2. Sequenzialità di esecuzione:
+        Le istruzioni vengono prelevate ed eseguite in ordine sequenziale (ciclo Fetch-Decode-Execute).
+
+    3. Facilità di implementazione:
+        Un sistema di controllo relativamente semplice rispetto ad altre architetture.
+
+    Svantaggi:
+        Bottleneck di von Neumann: Poiché il bus è condiviso tra dati e istruzioni, il trasferimento può diventare un collo di bottiglia, rallentando l’elaborazione.
+
+
+* Architettura Harvard (Sistemi embedded)
+
+    1. Memoria separata:
+        Dati e istruzioni sono memorizzati in memorie fisicamente separate.
+        Ogni memoria ha il proprio bus dedicato per trasferimenti indipendenti.
+
+    2. Parallelismo: 
+        La CPU può leggere istruzioni e dati simultaneamente, migliorando l’efficienza.
+
+    Svantaggi:
+        Design più complesso e costoso.
+        Maggiore rigidità nella gestione della memoria.
+
+* Gerarchia della memoria 
+
+    1. Registri, che sono veloci ma hanno una capacità limitata
+    2. Cache, veloce ma più lenta dei registri 
+    3. RAM, più lenta della cache ma con maggiore capacità
+    4. Memoria Secondaria (SSD/HDD, lenta ma con enorme capacità)
+
+    Quando la CPU necessita di accedere a un indirizzo di memoria, verifica prima se il dato è disponibile nella cache per accelerare i tempi di accesso. Se il dato non è presente, viene recuperato dalla RAM o dalla memoria secondaria.
+    
