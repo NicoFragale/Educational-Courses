@@ -101,9 +101,52 @@ Lezione 2
 * Gerarchia della memoria 
 
     1. Registri, che sono veloci ma hanno una capacità limitata
+    
     2. Cache, veloce ma più lenta dei registri 
+        Gerarchia delle Cache:
+            L1 Cache: La più veloce e vicina alla CPU (pochi KB).
+            L2 Cache: Più grande ma leggermente più lenta (diversi MB).
+            L3 Cache: Condivisa tra più core della CPU (fino a decine di MB).
+    
     3. RAM, più lenta della cache ma con maggiore capacità
+    
     4. Memoria Secondaria (SSD/HDD, lenta ma con enorme capacità)
 
-    Quando la CPU necessita di accedere a un indirizzo di memoria, verifica prima se il dato è disponibile nella cache per accelerare i tempi di accesso. Se il dato non è presente, viene recuperato dalla RAM o dalla memoria secondaria.
+    N.B Quando la CPU necessita di accedere a un indirizzo di memoria, verifica prima se il dato è disponibile nella cache per accelerare i tempi di accesso. Se il dato non è presente, viene recuperato dalla RAM o dalla memoria secondaria.
     
+* Ciclo di FETCH-DECODE-EXECUTE
+
+    Il ciclo di FETCH-DECODE-EXECUTE (o ciclo di istruzione) rappresenta le tre fasi principali con cui una CPU esegue le istruzioni presenti nella memoria. Ogni istruzione viene eseguita seguendo questo ciclo fondamentale.
+        FETCH   →   DECODE   →   EXECUTE   →   (ripeti)
+
+    1. FETCH  (Prelievo dell'Istruzione)
+        La CPU preleva l'istruzione dalla memoria utilizzando l'indirizzo indicato dal Program Counter (PC).
+        L'istruzione viene memorizzata nel Registro delle Istruzioni (IR).
+        Il PC viene incrementato per puntare alla prossima istruzione.
+    
+    2. DECODE (Decodifica dell'Istruzione)
+        L’istruzione viene decodificata dalla Unità di Controllo (CU).
+        La CPU identifica l'operazione da eseguire (ad esempio, somma, spostamento dati, salto condizionato).
+        Vengono determinati gli operandi necessari e i registri coinvolti.
+    
+    3. EXECUTE (Esecuzione dell'Istruzione)
+        La CPU esegue l'operazione specificata dall'istruzione.
+        I risultati vengono memorizzati nei registri o nella memoria.
+        I flag di stato vengono aggiornati se necessario (ad esempio, Zero Flag, Carry Flag).
+
+    ESEMPIO: 
+        MOV AX, [0x2000]  ; Carica il valore dalla memoria all'indirizzo 0x2000 nel registro AX
+
+        1. FETCH (Prelievo dell'Istruzione)
+            Il Program Counter (PC) contiene l'indirizzo dell'istruzione corrente, ad esempio 0x1000.
+            La CPU preleva l'istruzione MOV AX, [0x2000] dalla memoria all'indirizzo 0x1000.
+            L'istruzione viene caricata nel Registro delle Istruzioni (IR) e il PC viene incrementato a 0x1003 (supponendo che l'istruzione occupi 3 byte).
+        
+        2. DECODE (Decodifica dell'Istruzione)
+            La Unità di Controllo (CU) interpreta l'istruzione MOV AX, [0x2000].
+            La CPU capisce che deve leggere un valore dalla memoria all'indirizzo 0x2000 e copiarlo nel registro AX.
+        
+        3. EXECUTE (Esecuzione dell'Istruzione)
+            La CPU accede alla memoria all'indirizzo 0x2000 e legge il valore (ad esempio 0x1234).
+            Copia il valore 0x1234 nel registro AX.
+            Aggiorna eventuali flag se necessario.
