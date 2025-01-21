@@ -1,15 +1,27 @@
 Lezione 4
 
-1. Buffer Overflow 
-    - Esempi di exploit reali e tecniche per prevenire buffer overflow (es. ASLR, stack canary).
-    - Introduzione a DEP (Data Execution Prevention).
-    - Differenze e applicazioni nell'analisi di codice malevolo.
+1. Buffer Overflow
+    Un buffer overflow (o "overflow del buffer") è una vulnerabilità di sicurezza che si verifica quando un programma scrive più dati di quelli che un buffer (una zona di memoria temporanea) può contenere, 
+    sovrascrivendo dati adiacenti nella memoria.
+    Questo comportamento può portare all'esecuzione di codice dannoso, ad esempio, con l'iniezione di codice maligno che può compromettere il controllo del sistema da parte di un attaccante.
 
-2. Reverse Engineering 
-    - Strumenti comuni di reverse engineering (es. Ghidra, IDA Pro).
-    - Analisi di malware o software protetti da obfuscation.
+    Tecniche per Prevenire il Buffer Overflow:
+    1. Usare funzioni C sicure 
+    2. Stack canary
+    3. Randomizzare gli indirizzi di memoria 
+    4. DEP (Data Execution Prevention):
+        DEP (Data Execution Prevention) è una tecnologia di sicurezza che impedisce l'esecuzione di codice in aree di memoria non autorizzate. In altre parole, impedisce che dati (come quelli nel buffer o nell'heap) vengano trattati come codice eseguibile.
+        Memoria non eseguibile: La memoria è suddivisa in sezioni, alcune delle quali sono destinate solo ai dati (come stack, heap, e variabili locali), mentre altre sono destinate ad eseguire codice (come le sezioni del programma e le librerie).
+        Con DEP, viene impedito che le aree di memoria destinate a contenere dati (come lo stack o l'heap) possano essere eseguite come codice. Quindi, se un attaccante cerca di eseguire del codice (ad esempio, un shellcode) che è stato iniettato nella memoria dei dati, il sistema blocca l'esecuzione.
+
+2. Reverse Engineering o Offuscazione
+    Il reverse engineering (o ingegneria inversa) è il processo di analisi di un sistema, 
+    programma o applicazione per comprenderne il funzionamento, spesso partendo dal codice binario (cioè il programma già compilato) anziché dal codice sorgente originale. 
+    Viene utilizzato per capire come funziona un software o per scoprire vulnerabilità (come nelle analisi di malware), ma può anche essere usato per modificare o riparare software quando il codice sorgente non è disponibile.
+
+    Quando un software è progettato per impedire che venga facilmente analizzato o modificato, si utilizza una tecnica chiamata offuscazione. L'offuscazione rende il codice difficile da comprendere e da analizzare.
 
 3. Virtualizzazione 
-    - Come funzionano le macchine virtuali e la loro interazione con il linguaggio macchina.
-    - Come il linguaggio macchina interagisce con il kernel del sistema operativo.
-    - Come l'architettura e il linguaggio macchina influenzano le prestazioni.
+    La virtualizzazione è una tecnologia che permette di creare versioni "virtuali" di risorse fisiche, come server, sistemi operativi, dispositivi di archiviazione, e reti, rendendo queste risorse più flessibili e facilmente gestibili. Fondamentalmente, la virtualizzazione consente di eseguire più ambienti separati su una singola macchina fisica, che appare come se fossero macchine fisiche indipendenti.
+    La virtualizzazione crea una macchina virtuale (VM), che è una simulazione di una macchina fisica. Una macchina virtuale è come un computer "virtuale" che gira sopra un sistema operativo principale (chiamato host), ma funziona come se fosse un computer a sé stante, con il proprio sistema operativo (chiamato guest).
+    Quindi, in pratica, la virtualizzazione permette di eseguire più sistemi operativi sulla stessa macchina fisica, creando isole separate in cui ciascun sistema operativo può lavorare indipendentemente senza interferire con gli altri.j

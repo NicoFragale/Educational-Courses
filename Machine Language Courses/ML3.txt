@@ -1,11 +1,116 @@
 Lezione 3
 
 1. Decimale, Binario, Ottale, Esadecimale 
-    - Teoria.
-    - Conversioni pratiche tra i vari sistemi numerici.
-    - Addizione, sottrazione, moltiplicazione e divisione in binario.
 
-2. Codifica di Dati 
-    - Codifiche standard come ASCII, Unicode, UTF-8.
-    - Complemento a due, rappresentazione in virgola mobile (IEEE 754).
-    - Come i colori sono rappresentati nei sistemi binari ed esadecimali (es. RGB, HEX).
+    Un sistema di numerazione è un insieme di regole e simboli utilizzati per rappresentare i numeri. I sistemi più comuni sono:
+        - Sistema decimale (base 10): utilizza le cifre da 0 a 9.
+        - Sistema binario (base 2): utilizza solo le cifre 0 e 1.
+        - Sistema ottale (base 8): utilizza le cifre da 0 a 7.
+        - Sistema esadecimale (base 16): utilizza le cifre da 0 a 9 e le lettere da A a F (A=10, B=11, ... F=15).
+
+    Conversione Decimale - Binario
+        Metodo della divisione successiva:
+        Dividere il numero decimale per 2.
+        Scrivere il resto (0 o 1).
+        Ripetere fino a ottenere quoziente 0.
+        Leggere i resti dal basso verso l'alto.
+
+    Esempio: Convertire 25 in binario.
+        25 / 2 = 12, resto 1
+        12 / 2 = 6,  resto 0
+        6  / 2 = 3,  resto 0
+        3  / 2 = 1,  resto 1
+        1  / 2 = 0,  resto 1
+
+        Risultato: 11001₂
+
+        Convertire 11001₂ in decimale.
+        1*2^4 + 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 = 16 + 8 + 0 + 0 + 1 = 25
+
+    Applicazioni Pratiche del Sistema Binario
+
+        Informatica: rappresentazione dei dati (bit e byte).
+
+        Elettronica: logica digitale (AND, OR, NOT, XOR).
+
+        Reti: indirizzamento IP e subnet mask.
+
+        Crittografia: algoritmi di cifratura.
+
+1. Cos'è un Bit?
+    Il bit (abbreviazione di binary digit, ovvero cifra binaria) è l'unità di base dell'informazione in informatica e rappresenta uno stato binario:
+    
+    0 (spento, falso, negativo)
+    1 (acceso, vero, positivo)
+    
+    Un singolo bit può quindi rappresentare due stati distinti, ed è la base di tutte le operazioni e rappresentazioni digitali nei computer.
+    
+    Proprietà del bit:
+        - È l'unità minima di informazione.
+        - Può essere combinato con altri bit per formare strutture più complesse (byte, parole, ecc.).
+        - Viene utilizzato nei circuiti elettronici per la rappresentazione di segnali digitali.
+
+    Un byte è un'unità di informazione composta da 8 bit. È l'unità di base di memorizzazione nei computer e può rappresentare 256 valori diversi (da 0 a 255 in decimale, da 00000000 a 11111111 in binario).
+
+    Unità	                        Equivalenza	                    Descrizione
+    1 Byte	                        8 bit	                        Un carattere ASCII
+    1 Kilobyte (KB)	                1,024 Byte	                    Circa 1 pagina di testo
+    1 Megabyte (MB)	                1,024 KB (≈ 1 milione di byte)	Una foto di alta qualità
+    1 Gigabyte (GB)	                1,024 MB (≈ 1 miliardo di byte)	Un film in qualità standard
+    1 Terabyte (TB)	                1,024 GB (≈ 1 trilione di byte)	Un disco rigido di grande capacità
+
+
+    Trasmissione dati: le velocità di trasferimento sono spesso misurate in bit per secondo (bps), come nelle connessioni Internet.
+    Ad esempio, una connessione da 100 Mbps trasferisce 100 milioni di bit al secondo, che equivalgono a circa 12,5 megabyte al secondo (MB/s).
+
+    6. Conversioni Utili tra Bit e Byte
+    1 Byte = 8 Bit
+    1 Kilobyte (KB) = 1,024 Byte = 8,192 Bit
+    1 Megabyte (MB) = 1,024 KB = 8,388,608 Bit
+    1 Gigabyte (GB) = 1,024 MB = 8,589,934,592 Bit
+
+    Testo semplice:
+        1 carattere di testo ASCII occupa 1 byte.
+        Quindi 100 milioni di bit potrebbero contenere circa 12,5 milioni di caratteri, equivalenti a circa 6.000 pagine di testo, considerando 2.000 caratteri per pagina.
+    Musica MP3:
+        Un file MP3 di qualità media (128 kbps) occupa circa 1 MB per minuto di audio.
+        Quindi 12,5 MB equivalgono a circa 12,5 minuti di musica in qualità standard.
+    Foto in JPEG:
+        Una foto ad alta risoluzione (2-3 MB per immagine) implica che con 100 milioni di bit si potrebbero archiviare circa 4-5 foto in alta qualità.
+    Video in streaming:
+        Un video in qualità HD (720p) richiede circa 5 Mbps di banda.
+        Con 100 Mbps, potresti scaricare circa 20 secondi di video HD in 1 secondo.
+
+    3. Tempo di trasferimento
+        Se hai una connessione di 100 Mbps, in 1 secondo potresti scaricare:
+        12,5 MB di dati
+        Un file PDF grande o alcune foto in alta qualità
+        Un breve brano musicale in formato MP3
+        Se la velocità della connessione fosse inferiore, ad esempio 10 Mbps, ci vorrebbero 10 secondi per trasferire 100 milioni di bit.
+
+
+3. Le immagini
+
+    Le immagini digitali sono rappresentate come una serie di numeri binari, cioè sequenze di 0 e 1, che costituiscono i bit (unità di misura dell'informazione). 
+    La rappresentazione di un'immagine digitale dipende dal tipo di immagine (come le immagini in scala di grigi, a colori o altro) e dalla sua risoluzione. Vediamo i concetti principali:
+
+    1. Pixel (elementi di immagine)
+        Un'immagine digitale è composta da una matrice di pixel (picture element). Ogni pixel rappresenta un punto dell'immagine e contiene informazioni specifiche come il colore e la luminosità.
+        Nelle immagini in bianco e nero (o scala di grigi), ogni pixel ha un valore che rappresenta la sua intensità di luce. Per esempio, un pixel può essere rappresentato con un valore da 0 (nero) a 255 (bianco) in un formato a 8 bit.
+        Nelle immagini a colori, ogni pixel è rappresentato da una combinazione di valori di colore, come nel modello RGB (Rosso, Verde, Blu).
+    2. Risoluzione dell'immagine
+        La risoluzione dell'immagine è data dal numero di pixel in orizzontale (larghezza) e verticale (altezza). Ad esempio, un'immagine con risoluzione 1920x1080 ha 1920 pixel in orizzontale e 1080 pixel in verticale, quindi un totale di 2.073.600 pixel.
+    3. Profondità di colore
+        La profondità di colore determina quanti bit sono utilizzati per rappresentare il colore di ciascun pixel. Maggiore è la profondità di colore, più sfumature e dettagli possono essere rappresentati.
+        In un'immagine in bianco e nero a 8 bit, ogni pixel è rappresentato da 1 byte (8 bit) che può assumere 256 livelli di grigio (da 0 a 255).
+        In un'immagine RGB a 24 bit (comunemente usata), ogni pixel è composto da 3 canali di colore (Rosso, Verde e Blu), ognuno dei quali è rappresentato da 8 bit. Quindi, ogni canale (Rosso, Verde, Blu) avrà 256 possibili valori (0–255), e quindi un pixel sarà rappresentato da 24 bit (3 x 8 bit).
+
+    
+    Ogni canale di colore (R, G, B) viene rappresentato da una sequenza di bit. Per esempio, in un'immagine RGB a 24 bit, la rappresentazione di un pixel potrebbe essere:
+        Rosso (R): 8 bit
+        Verde (G): 8 bit
+        Blu (B): 8 bit
+    
+    5. Compressione delle immagini
+        Le immagini digitali possono essere compresse per ridurre la quantità di bit necessari per rappresentarle, utilizzando algoritmi di compressione come JPEG, PNG, GIF, ecc.
+        La compressione riduce la dimensione del file, ma può comportare una perdita di qualità (in caso di compressione "lossy" come JPEG) o nessuna perdita (in caso di compressione "lossless" come PNG).
