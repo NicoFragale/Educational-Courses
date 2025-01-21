@@ -41,6 +41,7 @@ Lezione 3
     - Teoria 
     - Conversioni pratiche tra i vari sistemi numerici.
     - Addizione, sottrazione, moltiplicazione e divisione in binario.
+
 2. Codifica di Dati 
     - Codifiche standard come ASCII, Unicode, UTF-8.
     - Complemento a due, rappresentazione in virgola mobile (IEEE 754).

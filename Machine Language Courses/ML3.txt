@@ -1,0 +1,11 @@
+Lezione 3
+
+1. Decimale, Binario, Ottale, Esadecimale 
+    - Teoria.
+    - Conversioni pratiche tra i vari sistemi numerici.
+    - Addizione, sottrazione, moltiplicazione e divisione in binario.
+
+2. Codifica di Dati 
+    - Codifiche standard come ASCII, Unicode, UTF-8.
+    - Complemento a due, rappresentazione in virgola mobile (IEEE 754).
+    - Come i colori sono rappresentati nei sistemi binari ed esadecimali (es. RGB, HEX).

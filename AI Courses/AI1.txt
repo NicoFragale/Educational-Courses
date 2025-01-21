@@ -1,0 +1,67 @@
+Lezione 1
+    - Comprendere cosa sia l’Intelligenza Artificiale (IA).
+        - cos'è
+        - differenza tra debole e forte 
+    - Esplorare la storia dell’IA: quando e dove è nata.
+    - Capire perché l’IA è rilevante oggi e i suoi impatti nella società e nella scuola.
+    - Vantaggi e sfide etiche dell’IA.
+    - Attività:
+        - esplora chatgpt 
+
+** Che cos’è l’Intelligenza Artificiale (IA)?
+
+L’Intelligenza Artificiale (IA) è una branca dell’informatica che mira a sviluppare sistemi in grado di svolgere attività che normalmente richiedono intelligenza umana. Queste attività possono includere il riconoscimento vocale, la comprensione del linguaggio naturale, la risoluzione di problemi complessi, l’apprendimento automatico, la pianificazione e il processo decisionale.
+L’IA si basa su modelli matematici, algoritmi e tecniche di apprendimento automatico (Machine Learning, ML) che permettono ai sistemi di migliorare le proprie prestazioni nel tempo grazie all’esperienza e ai dati che elaborano. L’obiettivo finale dell’IA è creare macchine capaci di "pensare", adattarsi, e prendere decisioni in modo autonomo.
+
+* Componenti chiave dell’IA:
+    Dati: L’IA si nutre di dati, che possono provenire da varie fonti come sensori, immagini, testi o dati strutturati.
+    Algoritmi: Gli algoritmi sono le istruzioni che permettono ai sistemi di elaborare i dati e di imparare.
+    Potenza computazionale: L'elaborazione dei dati e l’addestramento degli algoritmi richiedono una notevole capacità di calcolo.
+    Modelli di apprendimento: L’IA utilizza modelli per simulare processi di ragionamento o apprendimento.
+
+* IA Debole e IA Forte: Differenze
+L’IA viene tradizionalmente suddivisa in due categorie principali: IA debole e IA forte, che si distinguono per capacità, scopi e ambizioni.
+
+1. IA Debole (Weak AI)
+    L’IA debole è progettata per svolgere compiti specifici, senza possedere una comprensione o una consapevolezza generale. Questi sistemi sono altamente specializzati e non possono andare oltre il compito per cui sono stati programmati.
+    
+    Caratteristiche principali:
+        Specializzazione: È addestrata per eseguire un compito alla volta, come riconoscere immagini, rispondere a domande o giocare a un determinato gioco.
+        Non consapevole: Non ha comprensione, intenzionalità o autocoscienza; si limita a seguire regole e schemi.
+        
+        Esempi:
+            Assistenti vocali come Alexa, Siri e Google Assistant.
+            Sistemi di raccomandazione (ad esempio, Netflix o Amazon).
+            Algoritmi di riconoscimento facciale e biometrico.
+            Veicoli autonomi che utilizzano IA per la guida.
+    
+    Limiti dell’IA debole:
+        Dipende fortemente dai dati con cui è stata addestrata.
+        È inadatta a contesti nuovi o complessi al di fuori del suo dominio specifico.
+
+2. IA Forte (Strong AI)
+    L’IA forte è una forma ipotetica di intelligenza artificiale che aspira a replicare le capacità cognitive umane in modo completo. Questa categoria rappresenta una macchina che possiede autocoscienza, comprensione generale e la capacità di risolvere problemi non predefiniti, come farebbero gli esseri umani.
+    
+    Caratteristiche principali:
+        Generalità: È in grado di comprendere e apprendere qualunque compito o conoscenza, esattamente come un essere umano.
+        Autocoscienza: Possiede una consapevolezza di sé, intenzionalità e capacità di riflettere.
+        Autonomia completa: È in grado di prendere decisioni complesse senza l’intervento umano e può adattarsi a situazioni mai incontrate prima.
+        
+        Esempi ipotetici:
+            Un robot che può svolgere qualsiasi lavoro umano, dal pensare come uno scienziato al creare arte come un artista.
+            Sistemi in grado di discutere, ragionare e avere una propria "visione del mondo".
+            L’idea di un sistema simile a HAL 9000 del film 2001: Odissea nello spazio.
+    
+    Stato attuale dell’IA forte:
+        L’IA forte è al momento un obiettivo teorico e non esiste ancora una tecnologia che la rappresenti. Gli attuali sviluppi dell’IA si limitano a sistemi deboli, anche se avanzati, e l’IA forte rimane un tema di ricerca e dibattito filosofico ed etico.
+
+
+** Storia dell’IA: quando e dove è nata.
+
+    1. 1936: Alan Turing, matematico britannico, propose il concetto di una macchina universale, la Macchina di Turing, che dimostrò come un dispositivo meccanico potesse eseguire qualsiasi operazione computabile.
+    2. Nel 1950, Alan Turing propose il famoso Test di Turing, un criterio per determinare se una macchina possa essere considerata "intelligente". Il test si basa sulla capacità di una macchina di imitare un essere umano in una conversazione.
+    3. Dopo un iniziale entusiasmo, le aspettative irrealistiche portarono a una stagnazione. Il calo dei finanziamenti e il fallimento nel mantenere promesse grandiose provocarono la prima "IA Winter".
+    4. 1997: Il computer Deep Blue di IBM sconfisse il campione del mondo di scacchi Garry Kasparov, segnando una pietra miliare.
+    5. Dal 2000 in poi L’IA moderna si è spostata verso il Machine Learning (ML), dove i sistemi imparano dai dati senza essere esplicitamente programmati.
+    6. Il Deep Learning, che utilizza reti neurali profonde, ha permesso enormi progressi in campi come la visione artificiale e il riconoscimento vocale
+    

@@ -1,0 +1,15 @@
+Lezione 4
+
+1. Buffer Overflow 
+    - Esempi di exploit reali e tecniche per prevenire buffer overflow (es. ASLR, stack canary).
+    - Introduzione a DEP (Data Execution Prevention).
+    - Differenze e applicazioni nell'analisi di codice malevolo.
+
+2. Reverse Engineering 
+    - Strumenti comuni di reverse engineering (es. Ghidra, IDA Pro).
+    - Analisi di malware o software protetti da obfuscation.
+
+3. Virtualizzazione 
+    - Come funzionano le macchine virtuali e la loro interazione con il linguaggio macchina.
+    - Come il linguaggio macchina interagisce con il kernel del sistema operativo.
+    - Come l'architettura e il linguaggio macchina influenzano le prestazioni.
