@@ -1,5 +1,13 @@
 Lezione 4
-    - Progetto di gruppo
-        - Creazione di una lezione completa su un argomento a scelta utilizzando strumenti di IA.
-        - Preparazione di materiale didattico (schede, quiz, video).
-        - Condivisione dei progetti tra i partecipanti.
+    (
+        - tipi di AI 
+        - ML
+        - DL 
+        - NLP 
+        - GPT, BERT
+    - applicazioni delle AI 
+    - Attività:
+        - esplora chatgpt 
+    )
+    
+    - Altro 

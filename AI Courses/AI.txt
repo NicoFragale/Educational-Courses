@@ -9,27 +9,21 @@ Lezione 1
         - esplora chatgpt 
 ----------------------------
 Lezione 2
-    - tipi di AI 
+    - Progetto di gruppo 
+----------------------------
+Lezione 3
+    - Creazione di una lezione completa su un argomento a scelta utilizzando strumenti di IA.
+----------------------------
+Lezione 4
+    (
+        - tipi di AI 
         - ML
         - DL 
         - NLP 
         - GPT, BERT
     - applicazioni delle AI 
-    - Attività: 
-
-----------------------------
-Lezione 3
-    - Strumenti AI per insegnanti 
-        - Quizizz 
-        - Kahoot!
-        - ChatGPT
-    - Educare gli studenti all’uso consapevole dell’IA
     - Attività:
-        - Creare una lezione o un quiz usando ChatGPT
-        - Utilizzare Kahoot! per testare l’apprendimento degli studenti
-----------------------------
-Lezione 4
-    - Progetto di gruppo
-        - Creazione di una lezione completa su un argomento a scelta utilizzando strumenti di IA.
-        - Preparazione di materiale didattico (schede, quiz, video).
-        - Condivisione dei progetti tra i partecipanti.
+        - esplora chatgpt 
+    )
+    
+    - Altro 

@@ -1,8 +1,14 @@
 Lezione 2
-    - tipi di AI 
-        - ML
-        - DL 
-        - NLP 
-        - GPT, BERT
-    - applicazioni delle AI 
-    - Attività: 
+    - Progetto di gruppo 
+        1. formazione di gruppi (preferibilmente secondo materie o ordini scolastici simili (es. scuola primaria, secondaria))
+        2. scelta dell argomento 
+        3. progettare attività  
+            . Definire gli obiettivi didattici (cosa vogliono insegnare).
+            . Realizzazione 
+        
+        4. Presentazione (con pptx)
+            Titolo dell'attività.
+            Obiettivi didattici.
+            Strumenti utilizzati.
+            Dimostrazione pratica di come funziona.
+            Benefici e criticità riscontrate.

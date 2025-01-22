@@ -65,3 +65,5 @@ L’IA viene tradizionalmente suddivisa in due categorie principali: IA debole e
     5. Dal 2000 in poi L’IA moderna si è spostata verso il Machine Learning (ML), dove i sistemi imparano dai dati senza essere esplicitamente programmati.
     6. Il Deep Learning, che utilizza reti neurali profonde, ha permesso enormi progressi in campi come la visione artificiale e il riconoscimento vocale
     
+DIBATTITO TRA INSEGNANTI 
+ESPLORA CHATGPT 

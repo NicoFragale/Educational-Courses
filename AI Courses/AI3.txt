@@ -1,9 +1,23 @@
 Lezione 3
-    - Strumenti AI per insegnanti 
-        - Quizizz 
-        - Kahoot!
-        - ChatGPT
-    - Educare gli studenti all’uso consapevole dell’IA
-    - Attività:
-        - Creare una lezione o un quiz usando ChatGPT
-        - Utilizzare Kahoot! per testare l’apprendimento degli studenti
+
+1. Creazione di una lezione completa su un argomento a scelta utilizzando strumenti di IA.
+    1.1 Scelta dell argomento:
+        informatica
+        scienze
+        storia 
+        matematica 
+        altro
+
+    1.2 struttura:
+        Introduzione all'argomento.
+        Concetti base e avanzati.
+        Applicazioni pratiche.
+        Esercizi pratici o quiz.
+        Riepilogo e risorse aggiuntive.
+
+    1.3 creazione di materiale didattico:
+        Schede didattiche: documenti PDF con spiegazioni e riassunti.
+        Quiz interattivi: domande a scelta multipla, vero/falso, aperte.
+        creazione di immagini usando AI
+
+2.Condivisione dei progetti tra i partecipanti.
